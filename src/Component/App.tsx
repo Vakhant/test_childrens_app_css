@@ -67,9 +67,9 @@ export class App extends React.Component<{}, State> {
         }
 
         return (
-            <div>
+            <>
                 {router[this.state.page]}
-            </div>
+            </>
         )
     }
 

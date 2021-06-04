@@ -19,10 +19,11 @@ export class SettingInput extends React.Component<Props> {
    public render() {
         return (
             <input
+                className='input_text'
                 type="number"
                 value={this.state.value}
                 onChange={this.changeHandler.bind(this)}
-            disabled={this.props.disabled}/>
+                disabled={this.props.disabled}/>
         )
     }
 

@@ -27,27 +27,31 @@ export class TaskConfig extends React.Component<Props, State> {
         const taskSettings = this.state.taskSettings;
 
         return (
-            <div>
-                <div>
-                    <StartNewTaskButton onClick={this.clickHandler.bind(this)}/>
+            <div className='wrap'>
+                <div className='header'>
+                    <h1>Настройки задания</h1>
+                        <StartNewTaskButton onClick={this.clickHandler.bind(this)}/>
                 </div>
-                <h1>Настройки задания</h1>
-                Количество примеров: <div>
-                <input
-                    type="number"
-                    value={this.state.examplesCount}
-                    onChange={this.changeExamplesCountHandler.bind(this)}/>
-            </div>
-                <OperationSettings
-                    baseOperation={Operation.Add}
-                    taskSettings={taskSettings}
-                    exampleSettings={taskSettings.addSettings}
-                    profiles={this.props.profileProvider.addProfiles}/>
-                <OperationSettings
-                    baseOperation={Operation.Mult}
-                    taskSettings={taskSettings}
-                    exampleSettings={taskSettings.multSettings}
-                    profiles={this.props.profileProvider.multProfiles}/>
+                <div className="container">
+                    Количество примеров:
+                    <div>
+                    <input
+                    className='input_text'
+                        type="number"
+                        value={this.state.examplesCount}
+                        onChange={this.changeExamplesCountHandler.bind(this)}/>
+                    </div>
+                    <OperationSettings
+                        baseOperation={Operation.Add}
+                        taskSettings={taskSettings}
+                        exampleSettings={taskSettings.addSettings}
+                        profiles={this.props.profileProvider.addProfiles}/>
+                    <OperationSettings
+                        baseOperation={Operation.Mult}
+                        taskSettings={taskSettings}
+                        exampleSettings={taskSettings.multSettings}
+                        profiles={this.props.profileProvider.multProfiles}/>
+                </div>
             </div>
         )
     }

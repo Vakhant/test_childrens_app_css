@@ -1,0 +1,110 @@
+.settings_container{
+  margin-top: 30px;
+}
+.main_operation_checkox{
+  display: none;
+}
+.main_operation_checkox+label{
+  background-color: rgba(255,255,255,.5);
+  transition: .3s;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main_operation_checkox:checked+label{
+  background-color: #758EB1;
+  color: #fff;
+}
+.operation_checkboxes_list{
+  display: flex;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 15%);
+  margin: 10px 0;
+}
+.main_operation_checkox_block{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_operation_checkox_block:first-child{
+  border-right: 1px solid #fff;
+}
+
+.input_radio_wrap{
+  margin: 5px 0;
+  display: block;
+}
+input[type='radio']{
+  position: relative;
+  width: 0;
+  margin: 0;
+  margin-left: 5px;
+  margin-right: 18px;
+}
+input[type='radio']:after{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 12px;
+  height: 12px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 15%);
+}
+input[type='radio']:checked:before{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  top: 2px;
+  left: 2px;
+  background-color: #758EB1;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.settings{
+  height: 50px;
+  background-color: transparent;
+  transition: .3s;
+  margin: 10px 0;
+}
+.settings_btn{
+  width: 100%;
+  border: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #758EB1;
+  color: #fff;
+  transition: .3s;
+  padding: 0 15px;
+  cursor: pointer;
+}
+.settings_arrow{
+  transform: rotate(180deg);
+  transition: .3s;
+}
+.settings.settings_opened{
+  height: 200px;
+  background-color: #fff;
+}
+.settings_opened .settings_btn{
+  background-color: transparent;
+  color: #758EB1;
+  background-color: transparent;
+}
+.settings_opened .settings_btn{
+  background-color: transparent;
+}
+.settings_opened .settings_arrow{
+  transform: rotate(0);
+}

@@ -1,0 +1,23 @@
+.options_btn{
+    transform: rotate(0deg);
+    transition: .3s;
+}
+.options_btn:hover{
+    transform: rotate(360deg);
+}
+.answer_input_answer_wrap{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+.answer_btn_agree{
+    height: 50px; min-width: 50px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #758EB1;
+    cursor: pointer;
+}
+.state_example_string{
+    margin: 10px 0;
+}
